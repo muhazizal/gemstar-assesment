@@ -4,8 +4,6 @@ import ReactDOM from 'react-dom/client'
 import './styles/reset.css'
 import './styles/index.css'
 import '@fontsource/nunito'
-import { theme } from './plugins/theme'
-import { ThemeProvider } from '@mui/material/styles'
 
 import App from './App'
 import reportWebVitals from './reportWebVitals'
@@ -13,9 +11,7 @@ import reportWebVitals from './reportWebVitals'
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
 	<React.StrictMode>
-		<ThemeProvider theme={theme}>
-			<App />
-		</ThemeProvider>
+		<App />
 	</React.StrictMode>
 )
 
