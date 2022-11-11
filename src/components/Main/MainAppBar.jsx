@@ -1,9 +1,10 @@
 import { Component } from 'react'
-import CoreInput from './CoreInput'
 import { MdSearch, MdMenu } from 'react-icons/md'
 import { TbLogout } from 'react-icons/tb'
 
-export default class CoreAppBar extends Component {
+import CoreInput from '../Core/CoreInput'
+
+export default class MainAppBar extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
@@ -19,7 +20,7 @@ export default class CoreAppBar extends Component {
 	render() {
 		const search = this.state.search
 		return (
-			<div className='bg-white px-8 py-6 flex flex-auto flex-row justify-between items-center shadow-[0_2px_2px_4px_rgba(0,0,0,0.05)] h-[65px]'>
+			<header className='bg-white px-8 py-6 flex flex-auto flex-row justify-between items-center shadow-[0_2px_2px_4px_rgba(0,0,0,0.05)] h-[65px] ml-[295px]'>
 				<div className='flex flex-auto flex-row items-center'>
 					<MdSearch className='text-lg mr-2.5 text-[#505050]'></MdSearch>
 					<CoreInput
@@ -36,7 +37,7 @@ export default class CoreAppBar extends Component {
 					</button>
 					<MdMenu className='text-secondary text-[25px] ml-6'></MdMenu>
 				</div>
-			</div>
+			</header>
 		)
 	}
 }
