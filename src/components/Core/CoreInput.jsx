@@ -11,9 +11,7 @@ export default class CoreInput extends React.Component {
 	}
 
 	render() {
-		const type = this.props.type
-		const value = this.props.value
-		const placeholder = this.props.placeholder
+		const { type, value, placeholder } = this.props
 		return (
 			<input
 				type={type}

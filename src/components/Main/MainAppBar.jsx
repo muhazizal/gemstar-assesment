@@ -3,6 +3,7 @@ import { MdSearch, MdMenu } from 'react-icons/md'
 import { TbLogout } from 'react-icons/tb'
 
 import CoreInput from '../Core/CoreInput'
+import CoreButton from '../Core/CoreButton'
 
 export default class MainAppBar extends Component {
 	constructor(props) {
@@ -11,10 +12,20 @@ export default class MainAppBar extends Component {
 			search: '',
 		}
 		this.handleSearchChange = this.handleSearchChange.bind(this)
+		this.handleLogout = this.handleLogout.bind(this)
+		this.handleToggleMenu = this.handleToggleMenu.bind(this)
 	}
 
 	handleSearchChange(search) {
 		this.setState({ search })
+	}
+
+	handleLogout(evt) {
+		// logout
+	}
+
+	handleToggleMenu(evt) {
+		// toggle menu
 	}
 
 	render() {
@@ -31,11 +42,19 @@ export default class MainAppBar extends Component {
 					></CoreInput>
 				</div>
 				<div className='flex flex-auto flex-row justify-end items-center text-danger'>
-					<button className='flex flex-row justify-end items-center'>
-						<TbLogout className='text-base'></TbLogout>
-						<span className='text-base font-bold ml-2.5'>Logout</span>
-					</button>
-					<MdMenu className='text-secondary text-[25px] ml-6'></MdMenu>
+					<CoreButton
+						prependIcon={<TbLogout className='text-base'></TbLogout>}
+						label='Logout'
+						classLabel='text-base font-bold ml-2.5'
+						onClick={this.handleLogout}
+					></CoreButton>
+					<CoreButton
+						classButton='ml-6'
+						prependIcon={
+							<MdMenu className='text-secondary text-[25px]'></MdMenu>
+						}
+						onClick={this.handleToggleMenu}
+					></CoreButton>
 				</div>
 			</header>
 		)
