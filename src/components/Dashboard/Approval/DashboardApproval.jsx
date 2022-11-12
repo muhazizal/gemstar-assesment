@@ -12,15 +12,15 @@ export default class DashboardApproval extends Component {
 			title: 'Recent approvals',
 			subtitle: 'You can find the recent on-going approvals here',
 			approvals: [],
-			loadingGetMarkets: false,
+			isLoadingGetMarkets: false,
 		}
 		this.handleLoadingGetMarkets = this.handleLoadingGetMarkets.bind(this)
 		this.handleUpdateApprovals = this.handleUpdateApprovals.bind(this)
 		this.getMarkets = this.getMarkets.bind(this)
 	}
 
-	handleLoadingGetMarkets(loadingGetMarkets) {
-		this.setState({ loadingGetMarkets })
+	handleLoadingGetMarkets(isLoadingGetMarkets) {
+		this.setState({ isLoadingGetMarkets })
 	}
 
 	handleUpdateApprovals(payload) {
@@ -42,7 +42,7 @@ export default class DashboardApproval extends Component {
 	}
 
 	async getMarkets() {
-		if (this.state.loadingGetMarkets) return
+		if (this.state.isLoadingGetMarkets) return
 		this.handleLoadingGetMarkets(true)
 		try {
 			const response = await API.get('/', {
@@ -51,14 +51,12 @@ export default class DashboardApproval extends Component {
 					per_page: 10,
 				},
 			})
-			console.log('getMarkets response', response)
 			const { data } = response
 			if (data) {
 				this.handleUpdateApprovals(data)
 			}
 			this.handleLoadingGetMarkets(false)
 		} catch (error) {
-			console.log('getMarkets error', error)
 			this.handleLoadingGetMarkets(false)
 		}
 	}
@@ -68,14 +66,17 @@ export default class DashboardApproval extends Component {
 	}
 
 	render() {
-		const { title, subtitle, approvals } = this.state
+		const { title, subtitle, approvals, isLoadingGetMarkets } = this.state
 		return (
 			<div className='mt-14'>
 				<DashboardApprovalHeader
 					title={title}
 					subtitle={subtitle}
 				></DashboardApprovalHeader>
-				<DashboardApprovalList approvals={approvals}></DashboardApprovalList>
+				<DashboardApprovalList
+					approvals={approvals}
+					isLoadingGetMarkets={isLoadingGetMarkets}
+				></DashboardApprovalList>
 			</div>
 		)
 	}
