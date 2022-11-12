@@ -14,6 +14,7 @@ export default class CoreInput extends React.Component {
 		const { type, value, placeholder } = this.props
 		return (
 			<input
+				className='text-sm md:text-base'
 				type={type}
 				value={value}
 				placeholder={placeholder}

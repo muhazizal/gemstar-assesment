@@ -25,19 +25,13 @@ export default class MainAppBar extends Component {
 	}
 
 	handleToggleMenu(evt) {
-		// toggle menu
+		this.props.onToggleDrawer(evt)
 	}
 
 	render() {
 		const { search } = this.state
-		const appBarStyle = {
-			minWidth: 'calc(100vw - 295px)',
-		}
 		return (
-			<header
-				className='bg-white px-8 py-6 flex flex-auto flex-row justify-between items-center shadow-[2px_2px_4px_rgba(0,0,0,0.05)] h-[65px] ml-[295px] fixed overflow-auto top-0 z-10'
-				style={appBarStyle}
-			>
+			<header className='app-bar bg-white px-4 md:px-8 py-[20px] flex flex-auto flex-row justify-between items-center shadow-[2px_2px_4px_rgba(0,0,0,0.05)] h-[65px] fixed overflow-auto top-0 z-10 lg:ml-[295px]'>
 				<div className='flex flex-auto flex-row items-center'>
 					<MdSearch className='text-lg mr-2.5 text-[#505050]'></MdSearch>
 					<CoreInput
@@ -48,12 +42,14 @@ export default class MainAppBar extends Component {
 					></CoreInput>
 				</div>
 				<div className='flex flex-auto flex-row justify-end items-center text-danger'>
-					<CoreButton
-						prependIcon={<TbLogout className='text-base'></TbLogout>}
-						label='Logout'
-						classLabel='text-base font-bold ml-2.5'
-						onClick={this.handleLogout}
-					></CoreButton>
+					<div className='hidden lg:flex'>
+						<CoreButton
+							prependIcon={<TbLogout className='text-base'></TbLogout>}
+							label='Logout'
+							classLabel='text-base font-bold ml-2.5'
+							onClick={this.handleLogout}
+						></CoreButton>
+					</div>
 					<CoreButton
 						classButton='ml-6'
 						prependIcon={

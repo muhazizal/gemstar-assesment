@@ -8,5 +8,5 @@ export default function DashboardClientList(props) {
 			client={client}
 		></DashboardClientListItem>
 	))
-	return <div className='flex flex-row gap-[15px]'>{clientsEl}</div>
+	return <div className='client-list'>{clientsEl}</div>
 }

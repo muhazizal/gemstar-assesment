@@ -5,3 +5,6 @@
 body {
 	font-family: 'Nunito';
 }
+
+@import './components/app-bar.css';
+@import './components/dashboard-client.css';

@@ -68,7 +68,7 @@ export default class DashboardApproval extends Component {
 	render() {
 		const { title, subtitle, approvals, isLoadingGetMarkets } = this.state
 		return (
-			<div className='mt-14'>
+			<div className='mt-6 md:mt-14'>
 				<DashboardApprovalHeader
 					title={title}
 					subtitle={subtitle}

@@ -1,0 +1,13 @@
+.client-list {
+	display: flex;
+	flex-direction: row;
+	overflow: auto;
+	flex: auto;
+	gap: 8px;
+}
+
+@media (max-width: 414px) {
+	.client-list-item {
+		min-width: 295px !important;
+	}
+}

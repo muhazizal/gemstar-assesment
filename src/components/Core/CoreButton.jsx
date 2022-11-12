@@ -19,7 +19,7 @@ export default class CoreButton extends Component {
 				onClick={this.handleClick}
 			>
 				{prependIcon}
-				<span className={classLabel}>{label}</span>
+				<span className={`text-sm md:text-base ${classLabel}`}>{label}</span>
 			</button>
 		)
 	}
