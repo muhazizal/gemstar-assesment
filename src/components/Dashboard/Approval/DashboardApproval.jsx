@@ -1,6 +1,15 @@
 import { Component } from 'react'
 
+import dbsLogoSquare from '../../../assets/images/client/dbs-logo-square.png'
+import proudfootLogoSquare from '../../../assets/images/client/proudfoot-logo-square.png'
+import rmiLogoSquare from '../../../assets/images/client/rmi-logo-square.png'
+import jAvatar from '../../../assets/images/avatar/j-avatar.png'
+import lAvatar from '../../../assets/images/avatar/l-avatar.png'
+import mAvatar from '../../../assets/images/avatar/m-avatar.png'
+import ownerAvatarSmall from '../../../assets/images/avatar/owner-avatar-small.png'
+
 import DashboardApprovalHeader from './DashboardApprovalHeader'
+import DashboardApprovalList from './DashboardApprovalList'
 
 export default class DashboardApproval extends Component {
 	constructor(props) {
@@ -10,35 +19,38 @@ export default class DashboardApproval extends Component {
 			subtitle: 'You can find the recent on-going approvals here',
 			approvals: [
 				{
-					clientLogo: '',
+					clientLogo: dbsLogoSquare,
 					approvalName:
 						'DBS DEG renewal energy LinkedIn post tiles lorem ipsum dolor sit amet, consectetur adipiscing elit',
-					contactLogo: '',
+					contactAvatar: jAvatar,
 					contactName: 'Jasmine',
-					ownerLogo: '',
+					ownerAvatar: ownerAvatarSmall,
 					ownerName: 'Radhika',
-					dateIssued: '23/01/2022',
+					dateIssued: 'January 23, 2022',
 					status: 'In progress',
+					classStatus: 'bg-yellow',
 				},
 				{
-					clientLogo: '',
+					clientLogo: proudfootLogoSquare,
 					approvalName: 'PF website mining and metals edit',
-					contactLogo: '',
+					contactAvatar: lAvatar,
 					contactName: 'Lorena',
-					ownerLogo: '',
+					ownerAvatar: ownerAvatarSmall,
 					ownerName: 'Radhika',
-					dateIssued: '23/01/2022',
+					dateIssued: 'January 23, 2022',
 					status: '1st revision',
+					classStatus: 'bg-orange1',
 				},
 				{
-					clientLogo: '',
+					clientLogo: rmiLogoSquare,
 					approvalName: 'RMI January newletter EDM',
-					contactLogo: '',
+					contactAvatar: mAvatar,
 					contactName: 'Mervyn',
-					ownerLogo: '',
+					ownerAvatar: ownerAvatarSmall,
 					ownerName: 'Radhika',
-					dateIssued: '23/01/2022',
+					dateIssued: 'January 23, 2022',
 					status: '2nd revision',
+					classStatus: 'bg-orange2',
 				},
 			],
 		}
@@ -52,6 +64,7 @@ export default class DashboardApproval extends Component {
 					title={title}
 					subtitle={subtitle}
 				></DashboardApprovalHeader>
+				<DashboardApprovalList approvals={approvals}></DashboardApprovalList>
 			</div>
 		)
 	}

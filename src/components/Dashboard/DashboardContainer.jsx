@@ -1,9 +1,10 @@
 import DashboardApproval from './Approval/DashboardApproval'
 import DashboardClient from './Client/DashboardClient'
+import CoreButton from 'components/Core/CoreButton'
 
 export default function DashboardContainer() {
 	const containerStyle = {
-		height: 'calc(100vh - 65px)',
+		minHeight: 'calc(100vh - 65px)',
 	}
 	const title = 'Hi Radhika, welcome back!'
 	return (
@@ -13,6 +14,12 @@ export default function DashboardContainer() {
 			</h1>
 			<DashboardClient></DashboardClient>
 			<DashboardApproval></DashboardApproval>
+			<div className='mt-[15px]'>
+				<CoreButton
+					label='See all approvals here'
+					classLabel='text-primary font-bold'
+				></CoreButton>
+			</div>
 		</div>
 	)
 }
