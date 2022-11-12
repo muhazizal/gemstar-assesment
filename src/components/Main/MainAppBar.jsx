@@ -25,7 +25,7 @@ export default class MainAppBar extends Component {
 	}
 
 	handleToggleMenu(evt) {
-		// toggle menu
+		this.props.onToggleDrawer(evt)
 	}
 
 	render() {
@@ -42,12 +42,14 @@ export default class MainAppBar extends Component {
 					></CoreInput>
 				</div>
 				<div className='flex flex-auto flex-row justify-end items-center text-danger'>
-					<CoreButton
-						prependIcon={<TbLogout className='text-base'></TbLogout>}
-						label='Logout'
-						classLabel='text-base font-bold ml-2.5'
-						onClick={this.handleLogout}
-					></CoreButton>
+					<div className='hidden lg:flex'>
+						<CoreButton
+							prependIcon={<TbLogout className='text-base'></TbLogout>}
+							label='Logout'
+							classLabel='text-base font-bold ml-2.5'
+							onClick={this.handleLogout}
+						></CoreButton>
+					</div>
 					<CoreButton
 						classButton='ml-6'
 						prependIcon={
