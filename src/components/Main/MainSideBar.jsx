@@ -27,7 +27,7 @@ export default class MainSideBar extends Component {
 	render() {
 		const { navigationList, myAccountList } = this.state
 		return (
-			<div className='w-[295px] fixed overflow-auto top-0 h-full shadow-[2px_2px_4px_rgba(0,0,0,0.05)]'>
+			<div className='w-[295px] fixed overflow-auto top-0 h-full shadow-[2px_2px_4px_rgba(0,0,0,0.05)] hidden lg:block'>
 				<div className='bg-primary py-6 pl-6 h-[65px]'>
 					<img
 						className='max-w-[210px]'

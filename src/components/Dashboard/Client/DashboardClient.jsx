@@ -43,7 +43,7 @@ export default class DashboardClient extends Component {
 	render() {
 		const { title, subtitle, clients } = this.state
 		return (
-			<div className='mt-11'>
+			<div className='mt-6 md:mt-11'>
 				<DashboardClientHeader
 					title={title}
 					subtitle={subtitle}

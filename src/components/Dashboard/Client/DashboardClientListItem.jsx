@@ -8,7 +8,7 @@ export default function DashboardClientListItem(props) {
 		// click menu
 	}
 	return (
-		<div className='bg-white shadow-[2px_2px_4px_rgba(0,0,0,0.05)] rounded-[5px] p-4 max-w-[259px] relative'>
+		<div className='client-list-item bg-white shadow-[2px_2px_4px_rgba(0,0,0,0.05)] rounded-[5px] p-4 max-w-[259px] relative'>
 			<CoreButton
 				classButton='absolute top-2.5 right-2.5'
 				prependIcon={<TbDots className='text-secondary'></TbDots>}

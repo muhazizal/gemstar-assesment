@@ -22,11 +22,11 @@ export default function DashboardApprovalList(props) {
 				<DashboardApprovalListHeader></DashboardApprovalListHeader>
 			</div>
 			{isLoadingGetMarkets ? (
-				<div className='flex flex-auto flex-col gap-y-[13px]'>
+				<div className='flex flex-auto flex-col gap-y-3 md:gap-y-[13px]'>
 					{approvalListSkeletonEl}
 				</div>
 			) : (
-				<div className='flex flex-auto flex-col gap-y-[13px]'>
+				<div className='flex flex-auto flex-col gap-y-3 md:gap-y-[13px]'>
 					{approvalListEl}
 				</div>
 			)}

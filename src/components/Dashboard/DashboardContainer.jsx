@@ -8,8 +8,8 @@ export default function DashboardContainer() {
 	}
 	const title = 'Hi Radhika, welcome back!'
 	return (
-		<div style={containerStyle} className='p-8 bg-[#F5F6FA]'>
-			<h1 className='text-[28px] leading-7 font-bold text-secondary'>
+		<div style={containerStyle} className='p-4 md:p-8 bg-[#F5F6FA]'>
+			<h1 className='text-[24px] md:text-[28px] leading-7 font-bold text-secondary'>
 				{title}
 			</h1>
 			<DashboardClient></DashboardClient>

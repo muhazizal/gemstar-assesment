@@ -4,10 +4,12 @@ export default function MainFooter() {
 	}
 	return (
 		<footer
-			className='flex flex-auto flex-row justify-end items-center h-[65px] bg-[#F5F6FA] ml-[295px] p-8'
+			className='flex flex-auto flex-row justify-end items-center h-[65px] bg-[#F5F6FA] lg:ml-[295px] p-4 lg:p-8'
 			style={footerStyle}
 		>
-			<span className='text-secondary'>© Manning&Co. 2022</span>
+			<span className='text-secondary text-sm md:text-base'>
+				© Manning&Co. 2022
+			</span>
 		</footer>
 	)
 }

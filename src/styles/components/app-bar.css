@@ -1,0 +1,9 @@
+.app-bar {
+	min-width: 100%;
+}
+
+@media (min-width: 1024px) {
+	.app-bar {
+		min-width: calc(100vw - 295px);
+	}
+}
