@@ -10,6 +10,20 @@ export default function DashboardApprovalListItem(props) {
 		status,
 		classStatus,
 	} = props.approval
+
+	function ItemAvatar({ avatar, name }) {
+		return (
+			<div className='col-span-2 flex flex-auto flex-row items-center'>
+				<img
+					className='max-w-[23px] max-h-[22px]'
+					src={avatar}
+					alt='Contact Avatar'
+				/>
+				<span className='ml-2'>{name}</span>
+			</div>
+		)
+	}
+
 	return (
 		<div className='py-[13px] px-4 bg-white shadow-[2px_2px_4px_rgba(0,0,0,0.05)] rounded-[5px] grid gap-4 grid-cols-12 text-secondary'>
 			<div className='col-span-1'>
@@ -18,22 +32,8 @@ export default function DashboardApprovalListItem(props) {
 			<div className='col-span-3 flex flex-auto flex-row items-center'>
 				<div className='truncate font-bold'>{approvalName}</div>
 			</div>
-			<div className='col-span-2 flex flex-auto flex-row items-center'>
-				<img
-					className='max-w-[23px] max-h-[22px]'
-					src={contactAvatar}
-					alt='Contact Avatar'
-				/>
-				<span className='ml-2'>{contactName}</span>
-			</div>
-			<div className='col-span-2 flex flex-auto flex-row items-center'>
-				<img
-					className='max-w-[23px] max-h-[22px]'
-					src={ownerAvatar}
-					alt='Owner Avatar'
-				/>
-				<span className='ml-2'>{ownerName}</span>
-			</div>
+			<ItemAvatar avatar={contactAvatar} name={contactName}></ItemAvatar>
+			<ItemAvatar avatar={ownerAvatar} name={ownerName}></ItemAvatar>
 			<div className='col-span-2 flex flex-auto flex-row items-center'>
 				{dateIssued}
 			</div>
