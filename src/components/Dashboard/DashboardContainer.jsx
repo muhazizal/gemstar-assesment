@@ -4,7 +4,7 @@ import CoreButton from 'components/Core/CoreButton'
 
 export default function DashboardContainer() {
 	const containerStyle = {
-		minHeight: 'calc(100vh - 65px)',
+		minHeight: 'calc(100vh - 130px)',
 	}
 	const title = 'Hi Radhika, welcome back!'
 	return (
