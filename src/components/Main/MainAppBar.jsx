@@ -35,7 +35,7 @@ export default class MainAppBar extends Component {
 		}
 		return (
 			<header
-				className='bg-white px-8 py-6 flex flex-auto flex-row justify-between items-center shadow-[2px_2px_4px_rgba(0,0,0,0.05)] h-[65px] ml-[295px] fixed overflow-auto top-0'
+				className='bg-white px-8 py-6 flex flex-auto flex-row justify-between items-center shadow-[2px_2px_4px_rgba(0,0,0,0.05)] h-[65px] ml-[295px] fixed overflow-auto top-0 z-10'
 				style={appBarStyle}
 			>
 				<div className='flex flex-auto flex-row items-center'>
