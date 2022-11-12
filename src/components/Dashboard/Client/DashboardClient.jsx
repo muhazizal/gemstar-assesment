@@ -3,6 +3,7 @@ import { Component } from 'react'
 import dbsLogo from '../../../assets/images/client/dbs-logo.png'
 import proudfootLogo from '../../../assets/images/client/proudfoot-logo.png'
 import rmiLogo from '../../../assets/images/client/rmi-logo.png'
+import { DashboardClientHeader } from './DashboardClientHeader'
 
 import DashboardClientList from './DashboardClientList'
 
@@ -43,10 +44,11 @@ export default class DashboardClient extends Component {
 		const { title, subtitle, clients } = this.state
 		return (
 			<div className='mt-11'>
-				<div className='text-secondar mb-6'>
-					<h2 className='font-bold text-xl'>{title}</h2>
-					<span>{subtitle(clients.length)}</span>
-				</div>
+				<DashboardClientHeader
+					title={title}
+					subtitle={subtitle}
+					clientsCount={clients.length}
+				></DashboardClientHeader>
 				<DashboardClientList clients={clients}></DashboardClientList>
 			</div>
 		)
