@@ -4,7 +4,8 @@ import { MdOutlineDashboard } from 'react-icons/md'
 import { TbFileSearch } from 'react-icons/tb'
 import { BiUserPin, BiCog } from 'react-icons/bi'
 
-import CoreLogo from 'components/Core/CoreLogo'
+import imgLogo from '../../assets/images/logo.png'
+
 import MainNavigation from './Navigation/MainNavigation'
 import MainProfile from './MainProfile'
 
@@ -28,7 +29,11 @@ export default class MainSideBar extends Component {
 		return (
 			<div className='w-[295px] fixed overflow-auto top-0 h-full shadow-[2px_2px_4px_rgba(0,0,0,0.05)]'>
 				<div className='bg-primary py-6 pl-6 h-[65px]'>
-					<CoreLogo></CoreLogo>
+					<img
+						className='max-w-[210px]'
+						src={imgLogo}
+						alt='Logo MANNING & Co.'
+					></img>
 				</div>
 				<div className='pl-7 pt-14'>
 					<MainProfile></MainProfile>
