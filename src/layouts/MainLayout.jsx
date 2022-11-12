@@ -8,7 +8,7 @@ export default function MainLayout() {
 		<>
 			<MainAppBar></MainAppBar>
 			<MainSideBar></MainSideBar>
-			<main className='ml-[295px]'>
+			<main className='ml-[295px] mt-[65px]'>
 				<Outlet></Outlet>
 			</main>
 			<footer></footer>
