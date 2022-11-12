@@ -5,7 +5,7 @@ import { TbFileSearch } from 'react-icons/tb'
 import { BiUserPin, BiCog } from 'react-icons/bi'
 
 import CoreLogo from 'components/Core/CoreLogo'
-import MainNavigation from './MainNavigation'
+import MainNavigation from './Navigation/MainNavigation'
 import MainProfile from './MainProfile'
 
 export default class MainSideBar extends Component {
