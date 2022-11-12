@@ -31,7 +31,7 @@ export default class MainAppBar extends Component {
 	render() {
 		const { search } = this.state
 		return (
-			<header className='bg-white px-8 py-6 flex flex-auto flex-row justify-between items-center shadow-[0_2px_2px_4px_rgba(0,0,0,0.05)] h-[65px] ml-[295px]'>
+			<header className='bg-white px-8 py-6 flex flex-auto flex-row justify-between items-center shadow-[2px_2px_4px_rgba(0,0,0,0.05)] h-[65px] ml-[295px]'>
 				<div className='flex flex-auto flex-row items-center'>
 					<MdSearch className='text-lg mr-2.5 text-[#505050]'></MdSearch>
 					<CoreInput
