@@ -3,8 +3,8 @@ import { Component } from 'react'
 import dbsLogo from '../../../assets/images/client/dbs-logo.png'
 import proudfootLogo from '../../../assets/images/client/proudfoot-logo.png'
 import rmiLogo from '../../../assets/images/client/rmi-logo.png'
-import { DashboardClientHeader } from './DashboardClientHeader'
 
+import DashboardClientHeader from './DashboardClientHeader'
 import DashboardClientList from './DashboardClientList'
 
 export default class DashboardClient extends Component {

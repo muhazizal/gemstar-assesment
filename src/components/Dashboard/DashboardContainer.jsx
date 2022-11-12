@@ -1,3 +1,4 @@
+import DashboardApproval from './Approval/DashboardApproval'
 import DashboardClient from './Client/DashboardClient'
 
 export default function DashboardContainer() {
@@ -11,6 +12,7 @@ export default function DashboardContainer() {
 				{title}
 			</h1>
 			<DashboardClient></DashboardClient>
+			<DashboardApproval></DashboardApproval>
 		</div>
 	)
 }

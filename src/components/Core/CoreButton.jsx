@@ -11,10 +11,11 @@ export default class CoreButton extends Component {
 	}
 
 	render() {
-		const { classButton, classLabel, label, prependIcon } = this.props
+		const { classButton, classLabel, label, prependIcon, rounded } = this.props
+		const classRounded = rounded ? 'rounded-[53px] py-[6px] px-[25px]' : ''
 		return (
 			<button
-				className={classButton + ' flex flex-row justify-end items-center'}
+				className={`flex flex-row justify-end items-center ${classButton} ${classRounded}`}
 				onClick={this.handleClick}
 			>
 				{prependIcon}
